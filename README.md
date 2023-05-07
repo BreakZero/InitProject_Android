@@ -1,4 +1,12 @@
 
 ## BaseFramework 
 Refer from [nowinandroid](https://github.com/android/nowinandroid)
-clone and add your feature code into features folder/app module, and update core feature that you need.
+
+## Steps
+> 1. Clone to local
+```shell
+git clone git@github.com:BreakZero/InitProject_Android.git `Your Reps Name`
+```
+> 2. Then open project via Android Studio
+> 3. Change app like `applicationId`, `namespace`...
+> 4. Add features what you need
