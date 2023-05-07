@@ -9,4 +9,4 @@ git clone git@github.com:BreakZero/InitProject_Android.git `Your Reps Name`
 ```
 - Then open project via Android Studio 
 - Change app like `applicationId`, `namespace`...
-- Add features what you need
+- Add features that you need
