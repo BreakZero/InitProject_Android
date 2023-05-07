@@ -11,6 +11,7 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.graphics.Color
@@ -223,7 +224,7 @@ internal fun DefaultTheme(
   CompositionLocalProvider(
     LocalGradientColors provides gradientColors,
     LocalBackgroundTheme provides backgroundTheme,
-    LocalSpacing provides Dimensions
+    LocalSpacing provides Dimensions()
   ) {
     MaterialTheme(
       colorScheme = colorScheme,
@@ -233,21 +234,22 @@ internal fun DefaultTheme(
   }
 }
 
-object Dimensions {
-  val Default: Dp = 0.dp
-  val ExtraSmall: Dp = 4.dp
-  val Small: Dp = 8.dp
-  val Medium: Dp = 16.dp
-  val Large: Dp = 32.dp
-  val ExtraLarge: Dp = 64.dp
+@Immutable
+data class Dimensions(
+  val default: Dp = 0.dp,
+  val extraSmall: Dp = 4.dp,
+  val small: Dp = 8.dp,
+  val medium: Dp = 16.dp,
+  val large: Dp = 32.dp,
+  val extraLarge: Dp = 64.dp,
 
-  val Spacing12: Dp = 12.dp
-  val Spacing24: Dp = 24.dp
-  val Spacing48: Dp = 48.dp
-  val Spacing56: Dp = 56.dp
-}
+  val spacing12: Dp = 12.dp,
+  val spacing24: Dp = 24.dp,
+  val spacing48: Dp = 48.dp,
+  val spacing56: Dp = 56.dp
+)
 
-val LocalSpacing = compositionLocalOf { Dimensions }
+val LocalSpacing = compositionLocalOf { Dimensions() }
 
 val MaterialTheme.Spacings: Dimensions
   @Composable

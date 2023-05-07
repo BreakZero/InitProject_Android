@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Running lint check..."
+echo "lint checking..."
 
 ./gradlew ktlintCheck --no-configuration-cache --stacktrace
 
