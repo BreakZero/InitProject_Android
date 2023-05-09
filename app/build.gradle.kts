@@ -44,6 +44,9 @@ dependencies {
   implementation(project(":core:model"))
 
   implementation(project(":features:home"))
+  implementation(libs.androidx.hilt.navigation.compose)
+  implementation(libs.androidx.lifecycle.runtimeCompose)
+  implementation(libs.androidx.lifecycle.viewModelCompose)
 
   androidTestImplementation(project(":core:testing"))
   androidTestImplementation(libs.androidx.navigation.testing)
